@@ -82,7 +82,9 @@ sed -i "s|certificate_path:.*|certificate_path: $CERT_PATH|g" "$CONFIG_FILE"
 sed -i "s|private_key_path:.*|private_key_path: $KEY_PATH|g" "$CONFIG_FILE"
 
 # Tambahkan domain untuk DoH/DoT jika belum ada
-grep -q "dns.gapesta.my.id" "$CONFIG_FILE" || sed -i "/^tls:\$/a\\  server_name: $DOMAIN" "$CONFIG_FILE"
+#grep -q "dns.gapesta.my.id" "$CONFIG_FILE" || sed -i "/^tls:\$/a\\  server_name: $DOMAIN" "$CONFIG_FILE"
+
+grep -q "$DOMAIN" "$CONFIG_FILE" || sed -i "/^tls:\$/a\\  server_name: $DOMAIN" "$CONFIG_FILE"
 
 # Restart AdGuard Home
 echo "🔄 Restart AdGuard Home..."
