@@ -2,7 +2,7 @@
 ***jangan lupa install di root dan pointing dulu domainnya***
 ***Install Script Di Bawa Ini untuk caching dan tunneling DNS***
 
-<pre><code>bash <(curl -sL https://raw.githubusercontent.com/anakgapesta/dns-faster/main/setup-dns.sh)
+<pre><code>bash <(curl -sL https://raw.githubusercontent.com/gapesta/dns-faster/main/setup-dns.sh)
 </code></pre>
 
 # 🔑 Akses Web U
